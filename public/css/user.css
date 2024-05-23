@@ -1,0 +1,648 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Mulish',
+        sans-serif;
+    font-size: 16px;
+    background: #f8f8ff;
+    height: 100vh;
+    
+}
+
+/* Inicio de estilos header */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(0,59,92);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: 998;
+}
+
+.header-logo{
+    text-align: right;
+    display: inline-block;	
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+
+}
+
+.header-logo a{
+    font-family: sans-serif;
+    font-size: 36px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #fff;
+	font-weight: 700;
+	margin-right: 100px;
+    text-decoration: none;
+}
+
+.header-logo a:hover {
+    text-decoration: underline;
+}
+
+/* Fin de estilos header */
+
+
+
+/* Estilos para la tarjeta */
+
+/* Texto Top */
+.text-card{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 4rem;
+    text-shadow: 4px 2px 2px rgb(0, 0, 0);
+}
+
+.text-card h1 span{
+    background-color: rgba(0, 58, 92, 0.781);
+    background-size: contain;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-card p span{
+    background-color: rgba(0, 58, 92, 0.781);
+    background-size: contain;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* Fin texto bottom */
+
+/* Texto bottom */
+.text-card-bottom{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: -10rem;
+    text-shadow: 4px 2px 2px rgb(0, 0, 0);
+}
+
+.text-card-bottom h1 span{
+    background-color: rgba(0, 58, 92, 0.781);
+    background-size: contain;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-card-bottom p span{
+    background-color: rgba(0, 58, 92, 0.781);
+    background-size: contain;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/* Fin texto bottom */
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -400px;
+}
+
+.card {
+    margin-top: 10rem;
+    min-width: 26rem;
+    height: 16rem;
+    border-radius: 1rem;
+    perspective: 500px;
+    position: relative;
+    cursor: pointer;
+    font-family: monospace;
+    background: none;
+    border: none;
+}
+
+/* Estilos para contenido de la tarjeta */
+.card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    transition: transform 600ms ease;
+    transform-style: preserve-3d;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+}
+
+
+
+.card:hover .card__inner {
+    transform: rotateY(180deg);
+}
+/* Fin de estilos para contenido de la tarjeta */
+
+/* Estilos para contenido de la tarjeta frente/detras */
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    color: #fff;
+    background: #000000;
+    background-size: contain;
+}
+
+.card__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1rem;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+}
+/* Fin de Estilos para contenido de la tarjeta frente/detras */
+
+/* Estilos para el Contenido de el encabezado de la tarjeta */
+heading .logo-buap, .heading .subtitle, .foto, img, .datos{
+    display: flex;
+    flex-direction: row; 
+    
+}
+
+.heading .logo-buap {
+    display: flex;
+    flex-direction: row;
+    letter-spacing: -0.4mm;
+    /* Ajustar el tama;o del logo */
+    top: -0.35cm; 
+    margin-top: 2rem;
+    left: 0.6cm;
+    font-size: 1cm;
+}
+
+.logo-buap{
+    font-size: 12px;
+    line-height: 3mm;
+    font-weight: 600;
+    color: #009cc3;
+    display: block;
+    position: relative;
+    top: -0.7cm;
+    left: 3cm;
+}
+
+.datos, .heading .subtitle{
+list-style: none;
+}
+
+.heading .subtitle{
+    font-size: 12px;
+    line-height: 3mm;
+    font-weight: 600;
+    color: #009cc3;
+    display: block;
+    position: relative;
+    /* Ajustar el tama;o del nombre */
+    top: -1cm;
+    left: 2.3cm;
+}
+/* Fin de Estilos para el Contenido de el encabezado de la tarjeta */
+
+/* Inicio de estilos para el chip */
+.chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3.5rem !important;
+    top: -1rem;
+    border-radius: 0.3rem;
+    background-image:
+        linear-gradient(to bottom left,
+            #ffecc7, #d0b978);
+    overflow: hidden;
+    margin-left: 30px;
+    backface-visibility: hidden;
+}
+
+.chip .chip-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #303030;
+}
+
+.chip .chip-line:nth-child(1) {
+    top: 13px;
+}
+
+.chip .chip-line:nth-child(2) {
+    top: 20px;
+}
+
+.chip .chip-line:nth-child(3) {
+    top: 28px;
+}
+
+.chip .chip-line:nth-child(4) {
+    left: 25px;
+    width: 1px;
+    height: 50px;
+}
+
+.chip .chip-main {
+    width: 1.25rem;
+    height: 1.45rem;
+    border: 1px solid #333;
+    border-radius: 0.1875rem;
+    background-image:
+        linear-gradient(to bottom left,
+            #efdbab, #e1cb94);
+    z-index: 1;
+    backface-visibility: hidden;
+}
+/* Fin de estilos para el chip */
+
+
+
+/* Inicio de estilos para la informacion de la tarjeta del usuario */
+.card-holder-university,
+.card-holder {
+    text-transform: uppercase;
+}
+
+.card-info__bottom {
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.card-holder-university{
+    font-size: 12px;
+}
+
+.card-holder,
+.card-holder-university,
+.card-signature-headline {
+    background-image:
+        linear-gradient(to bottom, #ededed 30%,
+            #c2c2c2 70%),
+        linear-gradient(120deg, transparent 10%,
+            white 40%, white 60%,
+            transparent 90%);
+
+    background-size: cover, cover, 200%;
+    background-position: 50% 50%;
+    background-blend-mode: overlay;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: drop-shadow(1px 1px 1px rgba(black, 0.3));
+}
+
+/* Fin de estilos para la informacion de la tarjeta del usuario */
+
+/* Inicio de estilos para la parte trasera de la tarjeta */
+.card-strip {
+    min-height: 3rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    background: #000000;
+}
+
+.card-signature-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    color: black;
+    padding: 0 2rem;
+}
+
+.card-signature-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-signature {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #021318;
+    font-family: 'Allura', cursive;
+    padding: 0.25rem 2.5rem;
+    font-size: 1.25rem;
+    height: 2rem;
+    font-weight: bold;
+    width: 15rem;
+}
+
+.card-signature-headline {
+    content: 'Authorized Signature';
+    color: white;
+    font-size: 0.75rem;
+}
+
+/* Fin de estilos para la parte trasera de la tarjeta */
+/* Logo delantero */
+.logo {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2;
+    margin-top: -2rem;
+    width: 7rem;
+    height: 8rem;
+    margin-right: -1rem;
+    backface-visibility: hidden;
+}
+/* Logo trasero */
+.logo-santander{
+    margin-top: 4rem;
+    width: 6rem;
+    height: 5.6rem;
+    margin-right: 0.2rem;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2;
+}
+
+/* Estilos seccion botones */
+.section-bottoms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    
+}
+
+.button-52 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid rgb(0,59,92);
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(0,59,92);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+  z-index: 2;
+  font: sans-serif;
+  color: #fff;
+}
+
+.button-52:after {
+  content: "";
+  background-color: #009cc3;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+
+}
+
+
+@media (max-width: 768px) {
+    .section-bottoms {
+        display: flex;
+        flex-direction: column!important;
+    }
+
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+/* --------------------------------------------------------- Estilos repetidos para sidebar--------------------------------------------------- */
+/* Sidebar */
+/* img sidebar */
+img {
+    width: 100%;
+    overflow: hidden;
+}
+    /* Botono para desplegar la barra laterl (menu lateral) */
+.toggle-button {
+    position: fixed;
+    top: 10px;
+    left: 420px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002; 
+    background-color:  rgba(0, 58, 92, 0.733);
+}
+
+.toggle-button .line {
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: 5px auto;
+    z-index: 1002;
+}
+
+/* Estilos del sidebar */
+#sidebar {
+    /* Estilos para transicion smooth */
+    transition: margin-left 0.5s ease, box-shadow 0.5s ease;
+    /* Fin Estilos para transicion smooth */
+    background-color: rgb(1, 47, 73);
+    position: fixed;
+    top: 0; /* Añadido */
+    left: 0; /* Añadido */
+    width: 420px;
+    height: 100vh;
+    z-index: 999;
+    overflow-y: auto;
+}
+    /* Fijar contenido dentro del sidebar */
+#sidebar > .inner {
+    position: relative;
+    width: 420px;
+    padding: 0px 50px;
+}
+
+    /* Barra lateral inactiva */
+#sidebar.inactive {
+    margin-left: -420px;
+}
+
+#sidebar a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+/* Fin estilos sidebar */
+
+/* Menu */
+/* Featured Post */
+/* Backgorund de la seccion de noticias en sidebar */
+section {
+	border-bottom: 3px solid #eee;
+	padding-bottom: 100px;
+}
+.featured-posts {
+	margin-top: 50px;
+	position: relative;
+	background-color: rgb(1, 31, 48);
+	margin-left: -50px;
+	margin-right: -50px;
+	padding: 50px;
+}
+
+.featured-posts .heading h2 {
+	font-size: 19px;
+	color: #fff;
+	border-bottom: 1px solid #2d2e39;
+	padding-bottom: 10px;
+	margin-bottom: 25px;
+}
+
+.featured-posts p {
+    font-style: normal;
+	margin-top: 20px;
+	color: #fff;
+    text-decoration: none;
+}
+
+.featured-posts a{
+    font-style: normal;
+    text-decoration: none;
+}
+
+.featured-item:hover img{
+    transition: all 0.3s ease-in-out;
+    filter: brightness(0.7);
+    transform: scale(1.05);
+}
+
+.featured-item:hover p{
+    text-decoration: underline 0.1px;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#footer .copyright {
+	text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+#footer .copyright p {
+	margin-bottom: 0px;
+}
+
+#menu {
+	margin-top: 50px;
+}
+
+#menu ul {
+    color: #3d4449;
+    font-family: sans-serif;
+    font-family: 400;
+    letter-spacing: 0.075em;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#menu ul a,
+#menu ul span {
+	color: #fff;
+    border-bottom: 0;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+#menu ul p,
+#menu ul span {
+	color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+#menu ul li ul a,
+#menu ul li ul span {
+    padding: 10px 0px;
+}
+
+#menu ul a:hover,
+#menu ul span:hover {
+    text-decoration: underline;
+}
+
+
+/* br para el menu entre secciones */   
+#menu > ul > li {
+    border-top: solid 1px #1a1b20;
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 0 0 0;
+}
+
+/* Mantener el menu sin desplegar cuando se rechar la pagina */
+#menu > ul > li > ul {
+    color: #9fa3a6;
+    display: none;
+    margin: 0.5em 0 1.5em 0;
+    padding-left: 1em;
+}
+
+#menu > ul > li:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+
+
+
