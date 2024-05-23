@@ -9,23 +9,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">SERVIBUAP</a>
+        <a class="navbar-brand" href="{{route('home')}}">SERVIBUAP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="{{route('home')}}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Configuración de cuenta</a>
+                    <a class="nav-link" href="{{route('user')}}">Configuración de cuenta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tomar materias</a>
+                    <a class="nav-link" href="{{route('user.show', ['option' => 'user-materias-dashboard'])}}">Tomar materias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mis calificaciones</a>
+                    <a class="nav-link" href="{{route('user.show', ['option' => 'user-grades-dashboard'])}}">Mis calificaciones</a>
                 </li>
             </ul>
         </div>

@@ -14,6 +14,13 @@
     {{-- Estilos Adicionales --}}
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     @stack('css')
+    <style>
+        .main-banner .banner-content {
+            background-image: url({{ asset('assets/noticia-principal.jpg') }});
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +45,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="banner-content">
+                                <div class="banner-content" >
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="banner-caption">
@@ -286,8 +293,8 @@
                         <li>
                             <span class="opener">Sobre ti:</span>
                             <ul>
-                                <li><a href="{{route('user.show', ['option' => 'user-teacher-dashboard'])}}">Impartir Materia</a></li>
-                                <li><a href="{{route('user.show', ['option' => 'user-grades-dashboard'])}}">Calificar Alumnos</a></li>
+                                <li><a href="{{route('teacher.show', ['option' => 'teacher-materias-dashboard'])}}">Impartir Materia</a></li>
+                                <li><a href="{{route('teacher.show', ['option' => 'teacher-grades-dashboard'])}}">Calificar Alumnos</a></li>
                             </ul>
                         </li>
                         <li>

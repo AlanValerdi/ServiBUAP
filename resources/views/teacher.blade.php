@@ -113,11 +113,10 @@
                     </li>
                     <li>
                         <span class="opener">Sobre ti:</span>
-                        <ul>
-                            <li><a href="{{route('user.show', ['option' => 'user-teacher-dashboard'])}}">Mis profesores</a></li>
-                            <li><a href="{{route('user.show', ['option' => 'user-grades-dashboard'])}}">Mis calificaciones</a></li>
-                            <li><a href="{{route('user.show', ['option' => 'user-schedule-dashboard'])}}">Mi horario</a></li>
-                        </ul>
+                            <ul>
+                                <li><a href="{{route('teacher.show', ['option' => 'teacher-materias-dashboard'])}}">Impartir Materia</a></li>
+                                <li><a href="{{route('teacher.show', ['option' => 'teacher-grades-dashboard'])}}">Calificar Alumnos</a></li>
+                            </ul>
                     </li>
                     <li>
                         <form action="/logout" method="Post"> 
@@ -134,19 +133,19 @@
                     <h2>Te puede interesar:</h2>
                 </div>
                 <div class="owl-carousel owl-theme">
-                    <a href="{{route('noticias.show', ['noticia' => 'noticia-row-5'])}}">
+                    <a href="{{route('noticias-teacher.show', ['noticia' => 'noticia-row-5'])}}">
                         <div class="featured-item">
                             <img src="{{asset('assets/noticiasVarias/notivar5.png')}}" alt="featured one">
                             <p>Seguridad, traslado y servicios garantizados en CU2: rectora BUAP.</p>
                         </div>
                     </a>
-                    <a href="{{route('noticias.show', ['noticia' => 'noticia-row-1'])}}">
+                    <a href="{{route('noticias-teacher.show', ['noticia' => 'noticia-row-1'])}}">
                         <div class="featured-item">
                             <img src="{{asset('assets/noticiasVarias/notivar1.png')}}" alt="featured two">
                             <p>Lilia Cedillo: "Preparatoria Benito Juárez forma jóvenes competitivos".</p>
                         </div>
                     </a>
-                    <a href="{{route('noticias.show', ['noticia' => 'noticia-row-2'])}}">
+                    <a href="{{route('noticias-teacher.show', ['noticia' => 'noticia-row-2'])}}">
                         <div class="featured-item">
                             <img src="{{asset('assets/noticiasVarias/notivar2.png')}}" alt="featured three">
                             <p>Lilia Cedillo reconoce la calidad que brinda la Facultad de Estomatología.</p>

@@ -9,20 +9,23 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(30, 75, 182);">
-        <a class="navbar-brand" href="#">SERVIBUAP</a>
+        <a class="navbar-brand" href="{{route('home-teacher')}}">SERVIBUAP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+                    <a class="nav-link" href="{{route('home-teacher')}}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Impartir Materias</a>
+                    <a class="nav-link" href="{{route('teacher')}}">Configuración de cuenta</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Calificar Alumnos</a>
+                    <a class="nav-link" href="{{route('teacher.show', ['option' => 'teacher-materias-dashboard'])}}">Impartir Materias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('teacher.show', ['option' => 'teacher-grades-dashboard'])}}">Calificar Alumnos</a>
                 </li>
             </ul>
         </div>

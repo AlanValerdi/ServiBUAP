@@ -38,9 +38,8 @@
                         <li>
                             <span class="opener">Sobre ti:</span>
                             <ul>
-                                <li><a href="{{route('user.show', ['option' => 'user-teacher-dashboard'])}}">Mis profesores</a></li>
+                                <li><a href="{{route('user.show', ['option' => 'user-materias-dashboard'])}}">Tomar Materias</a></li>
                                 <li><a href="{{route('user.show', ['option' => 'user-grades-dashboard'])}}">Mis calificaciones</a></li>
-                                <li><a href="{{route('user.show', ['option' => 'user-schedule-dashboard'])}}">Mi horario</a></li>
                             </ul>
                         </li>
                         <li>
